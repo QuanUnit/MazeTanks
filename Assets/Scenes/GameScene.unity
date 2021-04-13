@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapGenerator: {fileID: 1603385216}
+  player: {fileID: 2967088294860244175, guid: 89dfda88972e630479b8a874b9ff315c, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
