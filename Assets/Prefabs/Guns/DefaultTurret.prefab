@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2457014956827253284}
   - component: {fileID: 2457014956827253285}
   - component: {fileID: 373864492331736502}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: DefaultTurret
   m_TagString: Gun
   m_Icon: {fileID: 0}
@@ -203,5 +203,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6276938797150881251, guid: c6f184360a9982c449c82564a3acf6b0, type: 3}
   forceOfShot: 4
-  rangeSpawnOfBullet: 0.3
+  rangeSpawnOfBullet: 0.25
   countOfBullets: 5

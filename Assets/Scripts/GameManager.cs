@@ -4,8 +4,10 @@ using UnityEngine;
 
 public sealed class GameManager : MonoBehaviour
 {
+    public GameMode CurrentGameMode { private get; set; } = GameMode.Duo;
+
     [SerializeField] private MapGenerator mapGenerator;
-    [SerializeField] private GameObject player; //test
+    [SerializeField] private List<GameObject> tanksPrefabs;  
     private void Start()
     {
         LaunchNewRound();
@@ -13,10 +15,35 @@ public sealed class GameManager : MonoBehaviour
     private void LaunchNewRound()
     {
         mapGenerator.MapGeneration();
-        SpawnPlayers();
+        switch (CurrentGameMode)
+        {
+            case GameMode.Solo:
+                break;
+            case GameMode.Duo:
+                SpawnPlayers(2);
+                break;
+            default:
+                throw new System.Exception("Mode not found");
+                break;
+        }
     }
-    private void SpawnPlayers()
+    private void SpawnPlayers(int countOfPlayers)
     {
-        Instantiate(player, new Vector3(0, 0, 0), Quaternion.identity);
+        Vector3 reserviredPos = Vector3.back;
+        for(int i = 0; i < countOfPlayers; i++)
+        {
+            Vector3 posForSpawn;
+            do
+            {
+                posForSpawn = mapGenerator.CellsGrid[Random.Range(0, mapGenerator.CellsGrid.Count)].pos;
+            } while (reserviredPos == posForSpawn);
+            GameObject createdTank = Instantiate(tanksPrefabs[i], posForSpawn, Quaternion.Euler(0, 0, Random.Range(0, 361)));
+            reserviredPos = createdTank.transform.position;
+        }
+    }
+    public enum GameMode
+    {
+        Solo,
+        Duo,
     }
 }

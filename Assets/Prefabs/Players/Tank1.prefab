@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2838938083193855863}
   - component: {fileID: 4574810321680048555}
   m_Layer: 10
-  m_Name: Tank
+  m_Name: Tank1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f7afca5496e9f604a8583780ae0e213d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.24056605, g: 0.9622642, b: 0.25743714, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -157,17 +157,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a52a4db4e176544ab057f3570b49d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
-    serializedVersion: 2
-    rgba: 0
   speed: 2
-  speedOfRotation: 1000
+  speedOfRotation: 1100
   rigidbody2D: {fileID: 5726470695603611054}
   up: 273
   down: 274
   left: 276
   right: 275
-  shot: 32
+  shot: 109
 --- !u!1001 &3768772407837086659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,6 +175,18 @@ PrefabInstance:
     - target: {fileID: -535138767347454935, guid: c96fa46a620e8024682c8e60a6e74ff6, type: 3}
       propertyPath: ObservedComponents.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457014956827253284, guid: c96fa46a620e8024682c8e60a6e74ff6, type: 3}
+      propertyPath: m_Color.b
+      value: 0.25882354
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457014956827253284, guid: c96fa46a620e8024682c8e60a6e74ff6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457014956827253284, guid: c96fa46a620e8024682c8e60a6e74ff6, type: 3}
+      propertyPath: m_Color.r
+      value: 0.23921569
       objectReference: {fileID: 0}
     - target: {fileID: 2457014956827253284, guid: c96fa46a620e8024682c8e60a6e74ff6, type: 3}
       propertyPath: m_SortingOrder

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5445483272880019878}
   - component: {fileID: 5445483272880019877}
-  - component: {fileID: 8848256835407282282}
+  - component: {fileID: 8389428097024775102}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Wall
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8848256835407282282
+--- !u!61 &8389428097024775102
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,7 +96,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}

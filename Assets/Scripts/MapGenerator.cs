@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MapGenerator : MonoBehaviour
+public sealed class MapGenerator : MonoBehaviour
 {
+    [HideInInspector] public List<Cell> CellsGrid { get; private set; }
     [Header("Map settings")]
     [SerializeField] private int lengthMap;
     [SerializeField] private int heightMap;
@@ -12,6 +13,7 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] [Range(0, 1)] private float CoeffOfCountPassages;
 
     [Header("Links")]
+    [SerializeField] private GameObject emptyMapPrefab;
     [SerializeField] private GameObject wallPrefab;
 
     private float wallSize;
@@ -23,7 +25,7 @@ public class MapGenerator : MonoBehaviour
     }
     public GameObject MapGeneration()
     {
-        GameObject map = new GameObject("Map");
+        GameObject map = Instantiate(emptyMapPrefab, transform.position, transform.rotation);
         for (float x = x_GenerationPoint + 0.5f; x < lengthMap + x_GenerationPoint; x += wallSize)
         {
             for (float y = y_GenerationPoint; y <= heightMap + y_GenerationPoint; y += wallSize)
@@ -61,11 +63,12 @@ public class MapGenerator : MonoBehaviour
     private void DeleteWalls()
     {
         Stack<Vector2> stack = new Stack<Vector2>();
-        List<Cell> CellsGrid = CreateCellsGrid();
+        List<Cell> cellsGrid = CreateCellsGrid();
+        this.CellsGrid = cellsGrid;
         Vector2 CurrCellPos = MapGeneratorTool.GetRandomPos(x_GenerationPoint, y_GenerationPoint, lengthMap, heightMap);
-        while (!MapGeneratorTool.CheckAllVisitedCell(CellsGrid))
+        while (!MapGeneratorTool.CheckAllVisitedCell(cellsGrid))
         {
-            List<Cell> neighboringCells = MapGeneratorTool.GetNeighboringCells(CurrCellPos, CellsGrid);
+            List<Cell> neighboringCells = MapGeneratorTool.GetNeighboringCells(CurrCellPos, cellsGrid);
             if (neighboringCells.Count > 0)
             {
                 stack.Push(CurrCellPos);
