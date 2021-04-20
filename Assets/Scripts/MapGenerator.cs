@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public sealed class MapGenerator : MonoBehaviour
+public sealed class MapGenerator : Singleton<MapGenerator>
 {
     [HideInInspector] public List<Cell> CellsGrid { get; private set; }
     [Header("Map settings")]

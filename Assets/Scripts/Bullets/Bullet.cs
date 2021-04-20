@@ -25,7 +25,7 @@ public abstract class Bullet : MonoBehaviour
         {
             Player player;
             collision.gameObject.TryGetComponent<Player>(out player);
-            //player.TakeHit();
+            player.TakeHit();
             DestroyBullet();
             Debug.Log("I hit a some player");
         }

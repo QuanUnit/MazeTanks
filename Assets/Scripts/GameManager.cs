@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public sealed class GameManager : MonoBehaviour
+public sealed class GameManager : Singleton<GameManager>
 {
     public GameMode CurrentGameMode { private get; set; } = GameMode.Duo;
 
-    [SerializeField] private MapGenerator mapGenerator;
     [SerializeField] private List<GameObject> tanksPrefabs;  
     private void Start()
     {
@@ -14,7 +13,7 @@ public sealed class GameManager : MonoBehaviour
     }
     private void LaunchNewRound()
     {
-        mapGenerator.MapGeneration();
+        MapGenerator.Instance.MapGeneration();
         switch (CurrentGameMode)
         {
             case GameMode.Solo:
@@ -35,7 +34,7 @@ public sealed class GameManager : MonoBehaviour
             Vector3 posForSpawn;
             do
             {
-                posForSpawn = mapGenerator.CellsGrid[Random.Range(0, mapGenerator.CellsGrid.Count)].pos;
+                posForSpawn = MapGenerator.Instance.CellsGrid[Random.Range(0, MapGenerator.Instance.CellsGrid.Count)].pos;
             } while (reserviredPos == posForSpawn);
             GameObject createdTank = Instantiate(tanksPrefabs[i], posForSpawn, Quaternion.Euler(0, 0, Random.Range(0, 361)));
             reserviredPos = createdTank.transform.position;
