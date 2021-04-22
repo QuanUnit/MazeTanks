@@ -9,6 +9,10 @@ public abstract class Bullet : MonoBehaviour
     public Gun OwnerGun { get; set; }
 
     [SerializeField] protected float lifeTime;
+    protected virtual void Start()
+    {
+        GameManager.Instance.AddDestroyedObjectAfterRaund(gameObject);
+    }
     protected virtual IEnumerator LifeCycle()
     {
         yield return new WaitForSeconds(lifeTime);
@@ -27,7 +31,6 @@ public abstract class Bullet : MonoBehaviour
             collision.gameObject.TryGetComponent<Player>(out player);
             player.TakeHit();
             DestroyBullet();
-            Debug.Log("I hit a some player");
         }
     }
 }

@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class CustomInput
 {
-    enum InputState
+    public enum InputState
     {
         Active,
         OnlyShot,
         OnlyMove,
+        Disabled,
     }
     private KeyCode leftKey;
     private KeyCode rightKey;
     private KeyCode upKey;
     private KeyCode downKey;
     private KeyCode shotKey;
+
     private InputState inputState;
+    
     public CustomInput(KeyCode leftKey, KeyCode rightKey, KeyCode upKey, KeyCode downKey, KeyCode shotKey)
     {
         inputState = InputState.Active;
@@ -51,8 +54,15 @@ public class CustomInput
         }
         return 0;
     }
+    public void SwitchState(InputState state)
+    {
+        inputState = state;
+    }
     public KeyCode GetShotButtonKey()
     {
-        return shotKey;
+        if(inputState == InputState.Active || inputState == InputState.OnlyShot)
+            return shotKey;
+        return KeyCode.None;
     }
 }
+

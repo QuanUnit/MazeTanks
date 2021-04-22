@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class DefaultBullet : Bullet
 {
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         StartCoroutine(LifeCycle());
     }
     protected override void DestroyBullet()
