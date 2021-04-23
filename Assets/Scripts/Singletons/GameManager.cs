@@ -5,6 +5,8 @@ using UnityEngine;
 public sealed class GameManager : Singleton<GameManager>
 {
     public GameMode CurrentGameMode { private get; set; } = GameMode.Duo;
+    public List<Player> Players { get; private set; } = new List<Player>();
+
     [Header("Links")]
     [SerializeField] private Counter counterOnStartRaund;
     [SerializeField] private List<GameObject> tanksPrefabs;
@@ -12,7 +14,6 @@ public sealed class GameManager : Singleton<GameManager>
     [SerializeField] [Range(0.5f, 3)] private float preparationTimeForNewRaund = 1.5f;
 
     private RaundPhase raundPhase;
-    private List<Player> players = new List<Player>();
     private List<GameObject> destroyedGameObjectAfterRaund = new List<GameObject>();
 
     private void Start()
@@ -24,6 +25,14 @@ public sealed class GameManager : Singleton<GameManager>
     public void AddDestroyedObjectAfterRaund(GameObject go)
     {
         destroyedGameObjectAfterRaund.Add(go);
+    }
+    public void RemoveDestroyedObjectAfterRaund(GameObject go)
+    {
+        destroyedGameObjectAfterRaund.Remove(go);
+    }
+    private void Update()
+    {
+        Debug.Log(destroyedGameObjectAfterRaund.Count);
     }
     private void LaunchNewRound()
     {
@@ -40,6 +49,7 @@ public sealed class GameManager : Singleton<GameManager>
                 break;
         }
         counterOnStartRaund.StartCount(3);
+        BonusSpawner.Instance.LaunchSpawnBonuses(Players.Count);
     }
     private void SpawnPlayers(int countOfPlayers)
     {
@@ -53,10 +63,17 @@ public sealed class GameManager : Singleton<GameManager>
             } while (reserviredPos == posForSpawn);
             GameObject createdTank = Instantiate(tanksPrefabs[i], posForSpawn, Quaternion.Euler(0, 0, Random.Range(0, 361)));
             Player player = createdTank.GetComponent<Player>();
-            players.Add(player);
-            player.TankDeath += delegate { StartCoroutine(PreparingForNewRaund()); };
-            AddDestroyedObjectAfterRaund(createdTank);
+            Players.Add(player);
+            player.OnDestroy += ReactToPlayerDeath;
             reserviredPos = createdTank.transform.position;
+        }
+    }
+    private void ReactToPlayerDeath(GameObject player)
+    {
+        Players.Remove(player.GetComponent<Player>());
+        if(Players.Count <= 1)
+        {
+            StartCoroutine(PreparingForNewRaund());
         }
     }
     private IEnumerator PreparingForNewRaund()
@@ -66,6 +83,7 @@ public sealed class GameManager : Singleton<GameManager>
             raundPhase = RaundPhase.PreparingForNewRaund;
             yield return new WaitForSeconds(preparationTimeForNewRaund);
             DestroyGameObjectsAfterRaund();
+            Players.Clear();
             LaunchNewRound();
         }
     }
@@ -80,7 +98,7 @@ public sealed class GameManager : Singleton<GameManager>
     private void StartCountDown()
     {
         raundPhase = RaundPhase.CountDown;
-        foreach (var player in players)
+        foreach (var player in Players)
         {
             player.Input.SwitchState(CustomInput.InputState.Disabled);
         }
@@ -88,7 +106,7 @@ public sealed class GameManager : Singleton<GameManager>
     private void FinishCountDown()
     {
         raundPhase = RaundPhase.Playing;
-        foreach (var player in players)
+        foreach (var player in Players)
         {
             player.Input.SwitchState(CustomInput.InputState.Active);
         }

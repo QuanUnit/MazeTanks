@@ -5,13 +5,14 @@ using UnityEngine;
 
 public abstract class Bullet : MonoBehaviour
 {
-    [HideInInspector] public event Action BulletDeath;
+    [HideInInspector] public event Action<GameObject> OnDestroy;
     public Gun OwnerGun { get; set; }
 
     [SerializeField] protected float lifeTime;
     protected virtual void Start()
     {
         GameManager.Instance.AddDestroyedObjectAfterRaund(gameObject);
+        OnDestroy += GameManager.Instance.RemoveDestroyedObjectAfterRaund;
     }
     protected virtual IEnumerator LifeCycle()
     {
@@ -20,7 +21,7 @@ public abstract class Bullet : MonoBehaviour
     }
     protected virtual void DestroyBullet()
     {
-        BulletDeath?.Invoke();
+        OnDestroy?.Invoke(gameObject);
         Destroy(gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)

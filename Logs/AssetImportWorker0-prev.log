@@ -15,11 +15,11 @@ E:/Project/MazeTanks
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49819
+63018
 Successfully changed project path to: E:/Project/MazeTanks
 E:/Project/MazeTanks
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 39.62 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 36.70 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.2f1 (e5d502d80fbb)
 [Subsystems] Discovering subsystems at path E:/Unity/2021.1.2f1/Editor/Data/Resources/UnitySubsystems
@@ -35,7 +35,7 @@ Initialize mono
 Mono path[0] = 'E:/Unity/2021.1.2f1/Editor/Data/Managed'
 Mono path[1] = 'E:/Unity/2021.1.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'E:/Unity/2021.1.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56980
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56940
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/Unity/2021.1.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -43,579 +43,57 @@ Register platform support module: E:/Unity/2021.1.2f1/Editor/Data/PlaybackEngine
 Register platform support module: E:/Unity/2021.1.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: E:/Unity/2021.1.2f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: E:/Unity/2021.1.2f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
-Registered in 0.001896 seconds.
+Registered in 0.004456 seconds.
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 37.02 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 39.35 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.584 seconds
+- Completed reload, in  1.565 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000768 seconds.
+Registered in 0.000802 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 35.80 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 38.94 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.029 seconds
+- Completed reload, in  1.011 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1846 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 87.4 MB.
-System memory in use after: 87.4 MB.
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2309.
-Total: 2.167200 ms (FindLiveObjects: 0.169100 ms CreateObjectMapping: 0.079200 ms MarkObjects: 1.861200 ms  DeleteObjects: 0.056800 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Scripts/Counter.cs
-  artifactKey: Guid(f45cb605f80bad04a8656b8a25d412e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Counter.cs using Guid(f45cb605f80bad04a8656b8a25d412e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62df86f50f3fc9a03f4e5db63b889ff4') in 0.076050 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000743 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.929 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1836 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.8 MB.
-System memory in use after: 86.9 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2312.
-Total: 2.271300 ms (FindLiveObjects: 0.166900 ms CreateObjectMapping: 0.080900 ms MarkObjects: 1.993000 ms  DeleteObjects: 0.029700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 553.348582 seconds.
-  path: Assets/Fonts
-  artifactKey: Guid(8ebd4e41185ff1f40a8c5a15247f39d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fonts using Guid(8ebd4e41185ff1f40a8c5a15247f39d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18996dbd02df7d72e07ba56f2679d709') in 0.012848 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.749546 seconds.
-  path: Assets/Fonts/20295.ttf
-  artifactKey: Guid(beb9217c890260449a4637e330d0e7d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fonts/20295.ttf using Guid(beb9217c890260449a4637e330d0e7d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5af501600f64c01f8ef64bf3b973303') in 0.116376 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 17.707480 seconds.
-  path: Assets/Fonts/MainFont.ttf
-  artifactKey: Guid(beb9217c890260449a4637e330d0e7d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fonts/MainFont.ttf using Guid(beb9217c890260449a4637e330d0e7d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '352c64c923ef59eed50556f455f2bc10') in 0.017660 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 73.538597 seconds.
-  path: Assets/20008.ttf
-  artifactKey: Guid(a2e158c7a5ea99441bbbce1f1e338879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/20008.ttf using Guid(a2e158c7a5ea99441bbbce1f1e338879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e8ee0dda18f2e32db43e6a99e22b96c') in 0.020180 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 44.002487 seconds.
-  path: Assets/Fonts/19847.otf
-  artifactKey: Guid(bba25a93372f66d4a981377b638d107d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fonts/19847.otf using Guid(bba25a93372f66d4a981377b638d107d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9c8eacf40c6078dc0bc33959e0aeba2') in 0.021235 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 91.431687 seconds.
-  path: Assets/Fonts/12412.ttf
-  artifactKey: Guid(beb9217c890260449a4637e330d0e7d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fonts/12412.ttf using Guid(beb9217c890260449a4637e330d0e7d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c21658f93caf239d71a7d520b44ccc0d') in 0.023733 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 13.243763 seconds.
-  path: Assets/Fonts/MainFont.ttf
-  artifactKey: Guid(a2e158c7a5ea99441bbbce1f1e338879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fonts/MainFont.ttf using Guid(a2e158c7a5ea99441bbbce1f1e338879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd759987f4d11c216c6f9aa39f3b0c620') in 0.022320 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000793 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.966 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1839 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.4 MB.
-System memory in use after: 93.5 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2446.
-Total: 2.495500 ms (FindLiveObjects: 0.169700 ms CreateObjectMapping: 0.075700 ms MarkObjects: 2.228500 ms  DeleteObjects: 0.020600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000777 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.935 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1836 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.3 MB.
-System memory in use after: 93.4 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2449.
-Total: 2.713000 ms (FindLiveObjects: 0.174400 ms CreateObjectMapping: 0.081300 ms MarkObjects: 2.437800 ms  DeleteObjects: 0.018100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 608.146516 seconds.
-  path: Assets/Prefabs/UI
-  artifactKey: Guid(848a74fe722a8e0428c7bb49a5593547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI using Guid(848a74fe722a8e0428c7bb49a5593547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e958d044c45426b6909d8c8ba6f6ca28') in 0.017137 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.167457 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e36082316c4c8ac765301468e72e5985') in 0.085976 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 16.436088 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd37f3e8829a832882cd7ce9f38fac59c') in 0.012094 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.004628 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '658258d00b67bb37319f2306be7fe8be') in 0.005042 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 16.159758 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37e291837548bbc8269d0b84a3005b42') in 0.019875 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.219659 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8d06308e755be5e587eea8c72e22d78') in 0.011589 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 37.568270 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '043d4991407b6758f2688a5277bb4265') in 0.012320 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 17.462709 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f069586294d5c7f21e8357f92e517ac1') in 0.009316 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000803 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.950 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1836 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.4 MB.
-System memory in use after: 93.5 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2452.
-Total: 2.391700 ms (FindLiveObjects: 0.176300 ms CreateObjectMapping: 0.080200 ms MarkObjects: 2.116400 ms  DeleteObjects: 0.017800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 137.165349 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85a02b15ab709887294df51ca9e4db0e') in 0.043069 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000770 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.950 seconds
-Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1836 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.4 MB.
-System memory in use after: 93.5 MB.
+Unloading 1845 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.9 MB.
+System memory in use after: 93.0 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2455.
-Total: 2.226700 ms (FindLiveObjects: 0.171500 ms CreateObjectMapping: 0.079800 ms MarkObjects: 1.960000 ms  DeleteObjects: 0.014500 ms)
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2319.
+Total: 2.551700 ms (FindLiveObjects: 0.169000 ms CreateObjectMapping: 0.092100 ms MarkObjects: 2.193600 ms  DeleteObjects: 0.095700 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 174.562327 seconds.
-  path: Assets/Scripts/RaundManager.cs
-  artifactKey: Guid(1ef92dc987a478e4296f31153e5eb032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/RaundManager.cs using Guid(1ef92dc987a478e4296f31153e5eb032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e72b2ddc329185cd1aedb2c3b01c719') in 0.014580 seconds 
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(fbc12b0a3d66b39498cac7c537d0170f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(fbc12b0a3d66b39498cac7c537d0170f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d56fc381eebe96c8f5e51c63ce4de08') in 0.073419 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 640.702229 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(fbc12b0a3d66b39498cac7c537d0170f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(fbc12b0a3d66b39498cac7c537d0170f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f41543122970e49563577648a2200d4c') in 0.004967 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000831 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.925 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.4 MB.
-System memory in use after: 93.5 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2458.
-Total: 2.289500 ms (FindLiveObjects: 0.199500 ms CreateObjectMapping: 0.079100 ms MarkObjects: 1.995100 ms  DeleteObjects: 0.015000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000883 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.926 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.4 MB.
-System memory in use after: 93.5 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2461.
-Total: 2.384700 ms (FindLiveObjects: 0.173900 ms CreateObjectMapping: 0.069400 ms MarkObjects: 2.123500 ms  DeleteObjects: 0.016900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000779 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.909 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.4 MB.
-System memory in use after: 93.5 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2464.
-Total: 5.167800 ms (FindLiveObjects: 0.539500 ms CreateObjectMapping: 0.375200 ms MarkObjects: 4.208900 ms  DeleteObjects: 0.041300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001133 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.238 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.4 MB.
-System memory in use after: 93.6 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2467.
-Total: 6.072300 ms (FindLiveObjects: 0.378800 ms CreateObjectMapping: 0.210700 ms MarkObjects: 5.453100 ms  DeleteObjects: 0.027300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1008.874428 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4ef6223a5286a8136a511bde617a3db') in 0.147580 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001039 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.905 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.5 MB.
-System memory in use after: 93.6 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2470.
-Total: 2.332200 ms (FindLiveObjects: 0.206100 ms CreateObjectMapping: 0.067100 ms MarkObjects: 2.041700 ms  DeleteObjects: 0.016500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 71.622513 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aed34e233fa1642b09166d4df299201b') in 0.035395 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 20.481728 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1d85f111327829e6b5607db1b3a2219') in 0.005056 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 109.061499 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '948563225ddcd65d3b5f3fb73ff21f4c') in 0.021078 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 42.413082 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e189a44c9f714e00764818c8cc008899') in 0.007305 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 24.818047 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7e315285259aa7daf939249699c8822') in 0.010193 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.565168 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce378a5bf5d6e0853f67ba5790e98e26') in 0.012001 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.781900 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2148b14c9114aff57011729f5eedb636') in 0.023922 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.306972 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8551476aef584d0b772bb3636eb0a66') in 0.025923 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.467629 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de6af64c07002188955ef10aa468f026') in 0.005060 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.189471 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0645ce8d5e4a8a5a6bddbbbb7c71e0ea') in 0.018522 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.415949 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2508fa538aa11b316211c2544b9fcd81') in 0.010830 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.992799 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47bf4523c6554839fe1148e11077c8b7') in 0.015274 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.508958 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '725d1a47842480582dcb079d336ca64b') in 0.009264 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.947657 seconds.
-  path: Assets/Prefabs/UI/Counter.prefab
-  artifactKey: Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/Counter.prefab using Guid(394a363464588784f8a4b5aa72f5f787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19949d7982e6ca72940157e316dc0df7') in 0.028069 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000816 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.008 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.5 MB.
-System memory in use after: 93.6 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2473.
-Total: 2.180800 ms (FindLiveObjects: 0.173300 ms CreateObjectMapping: 0.079700 ms MarkObjects: 1.911700 ms  DeleteObjects: 0.015500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001020 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.937 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.5 MB.
-System memory in use after: 93.6 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2476.
-Total: 2.242500 ms (FindLiveObjects: 0.169500 ms CreateObjectMapping: 0.073800 ms MarkObjects: 1.983200 ms  DeleteObjects: 0.015000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000786 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.934 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.5 MB.
-System memory in use after: 93.6 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2479.
-Total: 2.337200 ms (FindLiveObjects: 0.171800 ms CreateObjectMapping: 0.076200 ms MarkObjects: 2.073100 ms  DeleteObjects: 0.015300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000817 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.951 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.80 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.5 MB.
-System memory in use after: 93.6 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2482.
-Total: 2.274200 ms (FindLiveObjects: 0.177300 ms CreateObjectMapping: 0.078900 ms MarkObjects: 1.994600 ms  DeleteObjects: 0.022200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000748 seconds.
+Registered in 0.000745 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
@@ -625,185 +103,47 @@ Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.091 seconds
+- Completed reload, in  0.992 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.5 MB.
-System memory in use after: 93.6 MB.
+System memory in use before: 92.4 MB.
+System memory in use after: 92.5 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2485.
-Total: 2.549000 ms (FindLiveObjects: 0.178400 ms CreateObjectMapping: 0.191000 ms MarkObjects: 2.162400 ms  DeleteObjects: 0.016300 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2322.
+Total: 2.705400 ms (FindLiveObjects: 0.172500 ms CreateObjectMapping: 0.100900 ms MarkObjects: 2.414800 ms  DeleteObjects: 0.016100 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000883 seconds.
+Registered in 0.000773 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.936 seconds
+- Completed reload, in  0.897 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.5 MB.
-System memory in use after: 93.6 MB.
+System memory in use before: 92.4 MB.
+System memory in use after: 92.5 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2488.
-Total: 2.417900 ms (FindLiveObjects: 0.201900 ms CreateObjectMapping: 0.089400 ms MarkObjects: 2.108000 ms  DeleteObjects: 0.017600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000920 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.957 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.5 MB.
-System memory in use after: 93.6 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2491.
-Total: 2.392000 ms (FindLiveObjects: 0.174100 ms CreateObjectMapping: 0.071400 ms MarkObjects: 2.130200 ms  DeleteObjects: 0.015400 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2325.
+Total: 2.190800 ms (FindLiveObjects: 0.167700 ms CreateObjectMapping: 0.074200 ms MarkObjects: 1.933400 ms  DeleteObjects: 0.014600 ms)
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000759 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.952 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.5 MB.
-System memory in use after: 93.7 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2494.
-Total: 2.374000 ms (FindLiveObjects: 0.233600 ms CreateObjectMapping: 0.099800 ms MarkObjects: 2.023000 ms  DeleteObjects: 0.015100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000760 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.920 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.5 MB.
-System memory in use after: 93.7 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2497.
-Total: 2.480100 ms (FindLiveObjects: 0.192100 ms CreateObjectMapping: 0.083000 ms MarkObjects: 2.189700 ms  DeleteObjects: 0.014200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000746 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.997 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.6 MB.
-System memory in use after: 93.7 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2500.
-Total: 2.292400 ms (FindLiveObjects: 0.179400 ms CreateObjectMapping: 0.080700 ms MarkObjects: 2.015600 ms  DeleteObjects: 0.015500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000778 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.027 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.6 MB.
-System memory in use after: 93.7 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2503.
-Total: 2.292000 ms (FindLiveObjects: 0.189400 ms CreateObjectMapping: 0.091700 ms MarkObjects: 1.987500 ms  DeleteObjects: 0.022400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000796 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.000 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.6 MB.
-System memory in use after: 93.7 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2506.
-Total: 2.593100 ms (FindLiveObjects: 0.250400 ms CreateObjectMapping: 0.141800 ms MarkObjects: 2.181400 ms  DeleteObjects: 0.017900 ms)
-
+Received Import Request.
+  Time since last request: 181.547024 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(fbc12b0a3d66b39498cac7c537d0170f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(fbc12b0a3d66b39498cac7c537d0170f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dccdd5d3dcaf539d358b53a659e7a01') in 0.005334 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
@@ -814,108 +154,30 @@ Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.980 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.80 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.6 MB.
-System memory in use after: 93.7 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2509.
-Total: 3.932600 ms (FindLiveObjects: 0.324900 ms CreateObjectMapping: 0.169400 ms MarkObjects: 3.412800 ms  DeleteObjects: 0.023500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000770 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.022 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.6 MB.
-System memory in use after: 93.7 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2512.
-Total: 2.288400 ms (FindLiveObjects: 0.182400 ms CreateObjectMapping: 0.074100 ms MarkObjects: 2.013700 ms  DeleteObjects: 0.017200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000832 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.997 seconds
+- Completed reload, in  0.944 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.6 MB.
-System memory in use after: 93.8 MB.
+System memory in use before: 92.4 MB.
+System memory in use after: 92.5 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2515.
-Total: 2.200800 ms (FindLiveObjects: 0.193100 ms CreateObjectMapping: 0.087300 ms MarkObjects: 1.904600 ms  DeleteObjects: 0.014700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 2395.905326 seconds.
-  path: Assets/Scripts/IDestroyedInRoundEnding.cs
-  artifactKey: Guid(20f4dbddf26c71144861ed781f125c6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/IDestroyedInRoundEnding.cs using Guid(20f4dbddf26c71144861ed781f125c6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b511ad2b44e2ceadfb30ecd25f89620') in 0.013924 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000830 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.060 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1836 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.8 MB.
-System memory in use after: 93.9 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2519.
-Total: 2.314500 ms (FindLiveObjects: 0.190500 ms CreateObjectMapping: 0.075800 ms MarkObjects: 2.031200 ms  DeleteObjects: 0.016000 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2328.
+Total: 2.930800 ms (FindLiveObjects: 0.196800 ms CreateObjectMapping: 0.100500 ms MarkObjects: 2.606500 ms  DeleteObjects: 0.025600 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 94.046977 seconds.
-  path: Assets/Scripts/IDestroyedInRoundEnding.cs
-  artifactKey: Guid(20f4dbddf26c71144861ed781f125c6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/IDestroyedInRoundEnding.cs using Guid(20f4dbddf26c71144861ed781f125c6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0efb37cdf906b79b0a5ff715cfad980e') in 0.015721 seconds 
+  Time since last request: 71.834051 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(fbc12b0a3d66b39498cac7c537d0170f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(fbc12b0a3d66b39498cac7c537d0170f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17b0ffea3ccd801ccd5141971106e35e') in 0.004520 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001401 seconds.
+Registered in 0.000837 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
@@ -925,165 +187,21 @@ Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.394 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1836 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.7 MB.
-System memory in use after: 93.8 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2522.
-Total: 21.807500 ms (FindLiveObjects: 1.172600 ms CreateObjectMapping: 0.783100 ms MarkObjects: 19.809800 ms  DeleteObjects: 0.038500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.591420 seconds.
-  path: Assets/Scripts/New Folder
-  artifactKey: Guid(a43697012a4ebd043ab3b3603e952045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/New Folder using Guid(a43697012a4ebd043ab3b3603e952045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7a265283875411c150bd12540800926') in 0.011410 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 22.694063 seconds.
-  path: Assets/Scripts/IDrstroyedInRaundEnding.cs
-  artifactKey: Guid(0428712d2cfbcfb4596eb7bf4cc67c2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/IDrstroyedInRaundEnding.cs using Guid(0428712d2cfbcfb4596eb7bf4cc67c2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e650bdecae4ea6fb9667e9483ee79cf7') in 0.011886 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000781 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.104 seconds
+- Completed reload, in  0.973 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1837 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.7 MB.
-System memory in use after: 93.8 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2526.
-Total: 2.153600 ms (FindLiveObjects: 0.183600 ms CreateObjectMapping: 0.072200 ms MarkObjects: 1.882600 ms  DeleteObjects: 0.014400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000792 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.317 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.60 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1837 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.8 MB.
-System memory in use after: 93.9 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2529.
-Total: 3.714700 ms (FindLiveObjects: 1.272900 ms CreateObjectMapping: 0.199100 ms MarkObjects: 2.224800 ms  DeleteObjects: 0.016700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 32.025691 seconds.
-  path: Assets/Scripts/IDestroyedInRaundEnding.cs
-  artifactKey: Guid(d8afe76eaacae244ca96ccf209c66d97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/IDestroyedInRaundEnding.cs using Guid(d8afe76eaacae244ca96ccf209c66d97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6406f03e77e556df53d01eb79c6c1787') in 0.012804 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 90.618644 seconds.
-  path: Assets/Scripts/IDestroyedInRoundEnding.cs
-  artifactKey: Guid(20f4dbddf26c71144861ed781f125c6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/IDestroyedInRoundEnding.cs using Guid(20f4dbddf26c71144861ed781f125c6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '496e6f3d6f1b3b6d26829fd5cc2ba30c') in 0.005243 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.848550 seconds.
-  path: Assets/Scripts/IDrstroyedInRaundEnding.cs
-  artifactKey: Guid(0428712d2cfbcfb4596eb7bf4cc67c2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/IDrstroyedInRaundEnding.cs using Guid(0428712d2cfbcfb4596eb7bf4cc67c2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9befbeb0ec8c1baf9d9697c683cad03a') in 0.013370 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000817 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.993 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1836 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.7 MB.
-System memory in use after: 93.8 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2532.
-Total: 2.410400 ms (FindLiveObjects: 0.197700 ms CreateObjectMapping: 0.083500 ms MarkObjects: 2.113600 ms  DeleteObjects: 0.014200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001117 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.922 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.7 MB.
-System memory in use after: 93.8 MB.
+System memory in use before: 92.4 MB.
+System memory in use after: 92.5 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2535.
-Total: 2.217900 ms (FindLiveObjects: 0.178600 ms CreateObjectMapping: 0.073300 ms MarkObjects: 1.949500 ms  DeleteObjects: 0.015600 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2331.
+Total: 2.158500 ms (FindLiveObjects: 0.163700 ms CreateObjectMapping: 0.080600 ms MarkObjects: 1.898000 ms  DeleteObjects: 0.015000 ms)
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000713 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.881 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1835 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.8 MB.
-System memory in use after: 93.9 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2538.
-Total: 2.283900 ms (FindLiveObjects: 0.203900 ms CreateObjectMapping: 0.089300 ms MarkObjects: 1.975600 ms  DeleteObjects: 0.014100 ms)
-
+Received Import Request.
+  Time since last request: 23.785220 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(fbc12b0a3d66b39498cac7c537d0170f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(fbc12b0a3d66b39498cac7c537d0170f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd6dab195a700ed53df87610e178c4e4') in 0.008162 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

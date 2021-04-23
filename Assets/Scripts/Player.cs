@@ -7,7 +7,7 @@ using System;
 public class Player : MonoBehaviour
 {
     public CustomInput Input { get; private set; }
-    [HideInInspector] public event Action TankDeath;
+    [HideInInspector] public event Action<GameObject> OnDestroy;
 
     [SerializeField] private float speed;
     [SerializeField] private float speedOfRotation;
@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
+        OnDestroy += GameManager.Instance.RemoveDestroyedObjectAfterRaund;
+        GameManager.Instance.AddDestroyedObjectAfterRaund(gameObject);
     }
     private void FixedUpdate()
     {
@@ -37,7 +39,7 @@ public class Player : MonoBehaviour
     }
     private void DestroyTank()
     {
-        TankDeath?.Invoke();
+        OnDestroy?.Invoke(gameObject);
         Destroy(gameObject);
     }
     private void Move()
