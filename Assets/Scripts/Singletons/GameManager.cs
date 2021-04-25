@@ -46,7 +46,6 @@ public sealed class GameManager : Singleton<GameManager>
                 break;
             default:
                 throw new System.Exception("Mode not found");
-                break;
         }
         counterOnStartRaund.StartCount(3);
     }

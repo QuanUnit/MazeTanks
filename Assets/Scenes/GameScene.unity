@@ -656,7 +656,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allBonusPrefabs:
   - {fileID: 8575762884660870518, guid: fe06d8d0b6a305b408a0bf8374317927, type: 3}
-  - {fileID: 8575762884660870518, guid: 5863898af4e14264eba28cd04d9b84e7, type: 3}
-  - {fileID: 8575762884660870518, guid: 20d7529649ff0984f8ba19f8dbd96fd5, type: 3}
-  minTimeOfSpawn: 5
-  maxTimeOfSpawn: 10
+  minTimeOfSpawn: 1
+  maxTimeOfSpawn: 2

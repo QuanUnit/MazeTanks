@@ -25,7 +25,13 @@ public sealed class MapGenerator : Singleton<MapGenerator>
     }
     public GameObject MapGeneration()
     {
-        GameObject map = Instantiate(emptyMapPrefab, transform.position, transform.rotation);
+        Vector3 mapPosition = new Vector3((x_GenerationPoint + lengthMap / 2), (y_GenerationPoint + heightMap / 2));
+        Vector3 backGroundScale = new Vector3(lengthMap, heightMap);
+
+        GameObject map = Instantiate(emptyMapPrefab, mapPosition, transform.rotation);
+        GameObject backGround = map.transform.GetChild(0).gameObject;
+        backGround.transform.localScale = backGroundScale;
+
         for (float x = x_GenerationPoint + 0.5f; x < lengthMap + x_GenerationPoint; x += wallSize)
         {
             for (float y = y_GenerationPoint; y <= heightMap + y_GenerationPoint; y += wallSize)

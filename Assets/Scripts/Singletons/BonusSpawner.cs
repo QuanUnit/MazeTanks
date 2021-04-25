@@ -12,7 +12,6 @@ public class BonusSpawner : Singleton<BonusSpawner>
     private Coroutine coroutine;
     public void LaunchSpawnBonuses(int playersCount)
     {
-        Debug.Log("is started!");
         bonusesInScene.Clear();
         coroutine = StartCoroutine(SpawnBonuses(playersCount));
     }
@@ -20,13 +19,11 @@ public class BonusSpawner : Singleton<BonusSpawner>
     {
         if(coroutine != null)
             StopCoroutine(coroutine);
-        Debug.Log("is stoped!");
     }
     private IEnumerator SpawnBonuses(int playerCount)
     {
         while(true)
         {
-            Debug.Log("is working!");
             yield return new WaitForSeconds(Random.Range(minTimeOfSpawn, maxTimeOfSpawn));
             if(bonusesInScene.Count < playerCount * 2)
                 SpawnBonus();

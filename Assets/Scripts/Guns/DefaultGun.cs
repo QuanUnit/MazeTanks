@@ -6,12 +6,14 @@ public class DefaultGun : Gun
 {
     private void Update()
     {
-        if(countOfBullets > 0)
+        if (Input.GetKeyDown(ownerPlayer.Input.GetShotButtonKey()))
         {
-            if (Input.GetKeyDown(ownerPlayer.Input.GetShotButtonKey()))
-            {
-                Shot();
-            }
+            Shot();
         }
+    }
+    protected override void BulletRegistation(GameObject bullet)
+    {
+        base.BulletRegistation(bullet);
+        bullet.GetComponent<Bullet>().OnDestroy += delegate { IncreaseCountOfBullets(); };
     }
 }

@@ -159,8 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  speedOfRotation: 1100
-  rigidbody2D: {fileID: 0}
+  speedOfRotation: 275
   up: 119
   down: 115
   left: 97
@@ -178,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0869c85c268414f98deef5ca47043f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultGun: {fileID: 2457014956827253466, guid: c96fa46a620e8024682c8e60a6e74ff6, type: 3}
 --- !u!1001 &3768772407837086659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -219,7 +219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2457014956827253467, guid: c96fa46a620e8024682c8e60a6e74ff6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.89
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2457014956827253467, guid: c96fa46a620e8024682c8e60a6e74ff6, type: 3}
       propertyPath: m_LocalPosition.z

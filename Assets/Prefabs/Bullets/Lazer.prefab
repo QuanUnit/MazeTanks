@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4319938679451018380}
   - component: {fileID: 6534753945542876752}
   - component: {fileID: 720918391413516698}
+  - component: {fileID: 311031463562883562}
   m_Layer: 8
   m_Name: Lazer
   m_TagString: Bullet
@@ -121,7 +122,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: b97c27412343fbd4dad4f6496dcbc0d6, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!96 &720918391413516698
 TrailRenderer:
@@ -222,3 +223,16 @@ TrailRenderer:
   m_MinVertexDistance: 0.001
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &311031463562883562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779284388092262413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06071b5d7e162f143bc818ad7a8b3933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 2

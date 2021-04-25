@@ -6,9 +6,21 @@ using UnityEngine;
 public class Tank : MonoBehaviour
 {
     [HideInInspector] public event Action<GameObject> OnDestroy;
+    [SerializeField] private GameObject defaultGun;
+
     public void TakeHit()
     {
         DestroyTank();
+    }
+    public void ChangeGun(GameObject gun)
+    {
+        Destroy(transform.GetComponentInChildren<Gun>().gameObject);
+        GameObject spawnedGun;
+        if (gun == null)
+            spawnedGun = Instantiate(defaultGun, transform);
+        else
+            spawnedGun = Instantiate(gun, transform);
+        spawnedGun.GetComponent<SpriteRenderer>().color = GetComponent<SpriteRenderer>().color;
     }
     private void DestroyTank()
     {
