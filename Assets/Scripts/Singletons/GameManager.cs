@@ -5,7 +5,7 @@ using UnityEngine;
 public sealed class GameManager : Singleton<GameManager>
 {
     public GameMode CurrentGameMode { private get; set; } = GameMode.Duo;
-    public List<Player> Players { get; private set; } = new List<Player>();
+    public List<Tank> Tanks { get; private set; } = new List<Tank>();
 
     [Header("Links")]
     [SerializeField] private Counter counterOnStartRaund;
@@ -30,10 +30,10 @@ public sealed class GameManager : Singleton<GameManager>
     {
         destroyedGameObjectAfterRaund.Remove(go);
     }
-    private void Update()
-    {
-        Debug.Log(destroyedGameObjectAfterRaund.Count);
-    }
+    //private void Update()
+    //{
+    //    Debug.Log(destroyedGameObjectAfterRaund.Count);
+    //}
     private void LaunchNewRound()
     {
         AddDestroyedObjectAfterRaund(MapGenerator.Instance.MapGeneration());
@@ -49,7 +49,6 @@ public sealed class GameManager : Singleton<GameManager>
                 break;
         }
         counterOnStartRaund.StartCount(3);
-        BonusSpawner.Instance.LaunchSpawnBonuses(Players.Count);
     }
     private void SpawnPlayers(int countOfPlayers)
     {
@@ -62,28 +61,33 @@ public sealed class GameManager : Singleton<GameManager>
                 posForSpawn = MapGenerator.Instance.CellsGrid[Random.Range(0, MapGenerator.Instance.CellsGrid.Count)].pos;
             } while (reserviredPos == posForSpawn);
             GameObject createdTank = Instantiate(tanksPrefabs[i], posForSpawn, Quaternion.Euler(0, 0, Random.Range(0, 361)));
-            Player player = createdTank.GetComponent<Player>();
-            Players.Add(player);
-            player.OnDestroy += ReactToPlayerDeath;
+            Tank tank = createdTank.GetComponent<Tank>();
+
+            tank.OnDestroy += RemoveDestroyedObjectAfterRaund;
+            AddDestroyedObjectAfterRaund(createdTank);
+
+            Tanks.Add(tank);
+            tank.OnDestroy += ReactToPlayerDeath;
             reserviredPos = createdTank.transform.position;
         }
     }
     private void ReactToPlayerDeath(GameObject player)
     {
-        Players.Remove(player.GetComponent<Player>());
-        if(Players.Count <= 1)
+        Tanks.Remove(player.GetComponent<Tank>());
+        if(Tanks.Count <= 1)
         {
             StartCoroutine(PreparingForNewRaund());
         }
     }
     private IEnumerator PreparingForNewRaund()
     {
+        BonusSpawner.Instance.StopSpawnBonuses();
         if(raundPhase != RaundPhase.PreparingForNewRaund)
         {
             raundPhase = RaundPhase.PreparingForNewRaund;
             yield return new WaitForSeconds(preparationTimeForNewRaund);
             DestroyGameObjectsAfterRaund();
-            Players.Clear();
+            Tanks.Clear();
             LaunchNewRound();
         }
     }
@@ -98,17 +102,18 @@ public sealed class GameManager : Singleton<GameManager>
     private void StartCountDown()
     {
         raundPhase = RaundPhase.CountDown;
-        foreach (var player in Players)
+        foreach (var tank in Tanks)
         {
-            player.Input.SwitchState(CustomInput.InputState.Disabled);
+            tank.GetComponent<PlayerController>().Input.SwitchState(CustomInput.InputState.Disabled);
         }
     }
     private void FinishCountDown()
     {
+        BonusSpawner.Instance.LaunchSpawnBonuses(Tanks.Count);
         raundPhase = RaundPhase.Playing;
-        foreach (var player in Players)
+        foreach (var tank in Tanks)
         {
-            player.Input.SwitchState(CustomInput.InputState.Active);
+            tank.GetComponent<PlayerController>().Input.SwitchState(CustomInput.InputState.Active);
         }
     }
     public enum GameMode

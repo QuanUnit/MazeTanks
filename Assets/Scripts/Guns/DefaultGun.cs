@@ -14,11 +14,4 @@ public class DefaultGun : Gun
             }
         }
     }
-    public override void Shot()
-    {
-        base.Shot();
-        GameObject spawnedBullet = Instantiate(bulletPrefab, transform.position + transform.up * rangeSpawnOfBullet, Quaternion.identity);
-        spawnedBullet.GetComponent<Rigidbody2D>().AddForce(transform.up * forceOfShot, ForceMode2D.Impulse);
-        spawnedBullet.GetComponent<Bullet>().OwnerGun = this;
-    }
 }

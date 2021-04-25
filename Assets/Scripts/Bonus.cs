@@ -9,15 +9,10 @@ public class Bonus : MonoBehaviour
 
     [SerializeField] private GameObject gun;
 
-    private void Start()
-    {
-        OnDestroy += GameManager.Instance.RemoveDestroyedObjectAfterRaund;
-        GameManager.Instance.AddDestroyedObjectAfterRaund(gameObject);
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Player player;
-        if(collision.TryGetComponent<Player>(out player) == true)
+        Tank tank;
+        if(collision.TryGetComponent<Tank>(out tank) == true)
         {
             Debug.Log("Player gun is changed!");
             //player.ChangeGun(gun.GetComponent<Gun>());

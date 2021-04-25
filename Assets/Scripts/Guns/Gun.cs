@@ -8,13 +8,19 @@ public abstract class Gun : MonoBehaviour
     [SerializeField] protected float forceOfShot;
     [SerializeField] protected float rangeSpawnOfBullet;
     [SerializeField] protected uint countOfBullets;
-    protected Player ownerPlayer;
+
+    protected PlayerController ownerPlayer;
     private void Start()
     {
-        ownerPlayer = GetComponentInParent<Player>();
+        ownerPlayer = GetComponentInParent<PlayerController>();
     }
     public virtual void Shot()
     {
+        GameObject spawnedBullet = Instantiate(bulletPrefab, transform.position + transform.up * rangeSpawnOfBullet, Quaternion.identity);
+        GameManager.Instance.AddDestroyedObjectAfterRaund(spawnedBullet);
+        spawnedBullet.GetComponent<Bullet>().OnDestroy += GameManager.Instance.RemoveDestroyedObjectAfterRaund;
+        spawnedBullet.GetComponent<Rigidbody2D>().AddForce(transform.up * forceOfShot, ForceMode2D.Impulse);
+        spawnedBullet.GetComponent<Bullet>().OwnerGun = this;
         countOfBullets--;
     }
     public void IncreaseCountOfBullets()

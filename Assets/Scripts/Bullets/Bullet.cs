@@ -11,8 +11,7 @@ public abstract class Bullet : MonoBehaviour
     [SerializeField] protected float lifeTime;
     protected virtual void Start()
     {
-        GameManager.Instance.AddDestroyedObjectAfterRaund(gameObject);
-        OnDestroy += GameManager.Instance.RemoveDestroyedObjectAfterRaund;
+        
     }
     protected virtual IEnumerator LifeCycle()
     {
@@ -26,11 +25,10 @@ public abstract class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        Tank tank;
+        if (collision.gameObject.TryGetComponent<Tank>(out tank) == true)
         {
-            Player player;
-            collision.gameObject.TryGetComponent<Player>(out player);
-            player.TakeHit();
+            tank.TakeHit();
             DestroyBullet();
         }
     }
