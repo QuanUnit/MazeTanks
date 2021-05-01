@@ -6,6 +6,6 @@ public class DefaultBullet : Bullet
 {
     private void Start()
     {
-        StartCoroutine(LifeCycle());
+        StartCoroutine(LifeCycle(lifeTime));
     }
 }

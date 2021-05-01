@@ -14,6 +14,6 @@ public class LazerGun : Gun
     protected override void BulletRegistation(GameObject bullet)
     {
         base.BulletRegistation(bullet);
-        bullet.GetComponent<Bullet>().OnDestroy += delegate { tank.ChangeGun(null); };
+        bullet.GetComponent<Bullet>().OnDestroy += actionOfChangeGun;
     }
 }

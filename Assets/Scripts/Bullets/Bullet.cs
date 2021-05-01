@@ -9,7 +9,7 @@ public abstract class Bullet : MonoBehaviour
     public Gun OwnerGun { get; set; }
 
     [SerializeField] protected float lifeTime;
-    protected virtual IEnumerator LifeCycle()
+    protected virtual IEnumerator LifeCycle(float lifeTime)
     {
         yield return new WaitForSeconds(lifeTime);
         DestroyBullet();

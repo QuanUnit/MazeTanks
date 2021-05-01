@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6534753945542876752}
   - component: {fileID: 720918391413516698}
   - component: {fileID: 311031463562883562}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Lazer
   m_TagString: Bullet
   m_Icon: {fileID: 0}

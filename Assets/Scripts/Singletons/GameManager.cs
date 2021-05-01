@@ -30,10 +30,10 @@ public sealed class GameManager : Singleton<GameManager>
     {
         destroyedGameObjectAfterRaund.Remove(go);
     }
-    //private void Update()
-    //{
-    //    Debug.Log(destroyedGameObjectAfterRaund.Count);
-    //}
+    private void Update()
+    {
+        Debug.Log(destroyedGameObjectAfterRaund.Count);
+    }
     private void LaunchNewRound()
     {
         AddDestroyedObjectAfterRaund(MapGenerator.Instance.MapGeneration());

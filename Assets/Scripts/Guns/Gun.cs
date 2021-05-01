@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,12 +12,14 @@ public abstract class Gun : MonoBehaviour
 
     protected PlayerController ownerPlayer;
     protected Tank tank;
+    protected Action<GameObject> actionOfChangeGun;
     private void Start()
     {
         ownerPlayer = GetComponentInParent<PlayerController>();
         tank = GetComponentInParent<Tank>();
+        actionOfChangeGun = delegate { if (countOfBullets <= 0 && tank != null) tank.ChangeGun(null); };
     }
-    protected void Shot()
+    protected virtual void Shot()
     {
         if(countOfBullets > 0)
         {

@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lazer : Bullet
+public class ShotGunBullet : Bullet
 {
     private void Start()
     {
-        StartCoroutine(LifeCycle(lifeTime));
+        StartCoroutine(LifeCycle(Random.Range(lifeTime - 0.1f, lifeTime + 0.1f)));
     }
 }
