@@ -204,8 +204,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6276938797150881251, guid: 90905857d926a5a429bf646563690298, type: 3}
-  forceOfShot: 6
+  forceOfShot: 4
   rangeSpawnOfBullet: 0.35
-  countOfBullets: 3
-  fractionCount: 8
-  deflectionOfFractions: 10
+  countOfBullets: 4
+  fractionCount: 15
+  deflectionOfFractions: 20

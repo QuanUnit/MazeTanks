@@ -13,11 +13,20 @@ public abstract class Gun : MonoBehaviour
     protected PlayerController ownerPlayer;
     protected Tank tank;
     protected Action<GameObject> actionOfChangeGun;
+    protected List<GameObject> firedBullets = new List<GameObject>();
+
+    protected virtual void Update()
+    {
+        if (Input.GetKeyDown(ownerPlayer.Input.GetShotButtonKey()))
+        {
+            Shot();
+        }
+    }
     private void Start()
     {
         ownerPlayer = GetComponentInParent<PlayerController>();
         tank = GetComponentInParent<Tank>();
-        actionOfChangeGun = delegate { if (countOfBullets <= 0 && tank != null) tank.ChangeGun(null); };
+        actionOfChangeGun = delegate { if (countOfBullets <= 0 && tank != null && firedBullets.Count == 0) tank.ChangeGun(null); };
     }
     protected virtual void Shot()
     {
@@ -37,11 +46,8 @@ public abstract class Gun : MonoBehaviour
     protected virtual void BulletRegistation(GameObject bullet)
     {
         GameManager.Instance.AddDestroyedObjectAfterRaund(bullet);
-        bullet.GetComponent<Bullet>().OwnerGun = this;
+        firedBullets.Add(bullet);
         bullet.GetComponent<Bullet>().OnDestroy += GameManager.Instance.RemoveDestroyedObjectAfterRaund;
-    }
-    public void IncreaseCountOfBullets()
-    {
-        countOfBullets++;
+        bullet.GetComponent<Bullet>().OnDestroy += delegate { firedBullets.Remove(bullet); };
     }
 }

@@ -6,9 +6,15 @@ using UnityEngine;
 public abstract class Bullet : MonoBehaviour
 {
     [HideInInspector] public event Action<GameObject> OnDestroy;
-    public Gun OwnerGun { get; set; }
 
     [SerializeField] protected float lifeTime;
+
+    Coroutine lifeCycleCorutine;
+
+    protected void Start()
+    {
+        lifeCycleCorutine = StartCoroutine(LifeCycle(lifeTime));
+    }
     protected virtual IEnumerator LifeCycle(float lifeTime)
     {
         yield return new WaitForSeconds(lifeTime);
@@ -16,6 +22,8 @@ public abstract class Bullet : MonoBehaviour
     }
     protected virtual void DestroyBullet()
     {
+        if (lifeCycleCorutine != null)
+            StopCoroutine(lifeCycleCorutine);
         OnDestroy?.Invoke(gameObject);
         Destroy(gameObject);
     }

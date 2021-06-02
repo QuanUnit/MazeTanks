@@ -51,6 +51,7 @@ public sealed class MapGenerator : Singleton<MapGenerator>
         {
             Instantiate(wallPrefab, allWalls[i].Pos, Quaternion.Euler(allWalls[i].Rotation), map.transform);
         }
+        allWalls.Clear();
         return map;
     }
     private List<Cell> CreateCellsGrid()

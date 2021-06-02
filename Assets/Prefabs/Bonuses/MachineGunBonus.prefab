@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7738802540753020159}
   - component: {fileID: -2667586240116462210}
   - component: {fileID: 5787552803722479356}
-  m_Layer: 11
-  m_Name: MachineGunBonus 1
+  m_Layer: 9
+  m_Name: MachineGunBonus
   m_TagString: Bonus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

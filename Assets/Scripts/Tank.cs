@@ -5,9 +5,15 @@ using UnityEngine;
 
 public class Tank : MonoBehaviour
 {
+    public enum TankColor
+    {
+        green,
+        red,
+    }
+    [SerializeField] public TankColor tankColor;
+
     [HideInInspector] public event Action<GameObject> OnDestroy;
     [SerializeField] private GameObject defaultGun;
-
     public void TakeHit()
     {
         DestroyTank();

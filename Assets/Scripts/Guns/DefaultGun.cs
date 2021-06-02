@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class DefaultGun : Gun
 {
-    private void Update()
+    protected override void Update()
     {
-        if (Input.GetKeyDown(ownerPlayer.Input.GetShotButtonKey()))
-        {
-            Shot();
-        }
+        base.Update();
+    }
+    private void IncreaseCountOfBullets()
+    {
+        countOfBullets++;
     }
     protected override void BulletRegistation(GameObject bullet)
     {

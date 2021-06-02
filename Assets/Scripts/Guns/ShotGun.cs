@@ -29,10 +29,8 @@ public class ShotGun : Gun
     protected override GameObject SpawnBullet(Vector3 shotDiration)
     {
         float deflectionAngle = Mathf.PI / 180 * Random.Range(-deflectionOfFractions, deflectionOfFractions);
-        float x = shotDiration.x * Mathf.Cos(deflectionAngle) - shotDiration.y * Mathf.Sin(deflectionAngle);
-        float y = shotDiration.x * Mathf.Sin(deflectionAngle) + shotDiration.y * Mathf.Cos(deflectionAngle);
-        shotDiration = new Vector3(x, y);
-        return base.SpawnBullet(shotDiration);
+        Vector3 dir = shotDiration.RejectVector(deflectionAngle);
+        return base.SpawnBullet(dir);
     }
     protected override void BulletRegistation(GameObject bullet)
     {

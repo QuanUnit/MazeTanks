@@ -9,7 +9,9 @@ public sealed class GameManager : Singleton<GameManager>
 
     [Header("Links")]
     [SerializeField] private Counter counterOnStartRaund;
-    [SerializeField] private List<GameObject> tanksPrefabs;
+
+    [SerializeField] private List<KeyValue<GameObject, ScoreTable>> tanksAndScoreTables;
+
     [Header("GameSettings")]
     [SerializeField] [Range(0.5f, 3)] private float preparationTimeForNewRaund = 1.5f;
 
@@ -22,6 +24,10 @@ public sealed class GameManager : Singleton<GameManager>
         counterOnStartRaund.OnFinishedCount += FinishCountDown;
         LaunchNewRound();
     }
+    private void Update()
+    {
+        //Debug.Log(destroyedGameObjectAfterRaund.Count);
+    }
     public void AddDestroyedObjectAfterRaund(GameObject go)
     {
         destroyedGameObjectAfterRaund.Add(go);
@@ -29,10 +35,6 @@ public sealed class GameManager : Singleton<GameManager>
     public void RemoveDestroyedObjectAfterRaund(GameObject go)
     {
         destroyedGameObjectAfterRaund.Remove(go);
-    }
-    private void Update()
-    {
-        Debug.Log(destroyedGameObjectAfterRaund.Count);
     }
     private void LaunchNewRound()
     {
@@ -59,8 +61,11 @@ public sealed class GameManager : Singleton<GameManager>
             {
                 posForSpawn = MapGenerator.Instance.CellsGrid[Random.Range(0, MapGenerator.Instance.CellsGrid.Count)].pos;
             } while (reserviredPos == posForSpawn);
-            GameObject createdTank = Instantiate(tanksPrefabs[i], posForSpawn, Quaternion.Euler(0, 0, Random.Range(0, 361)));
+            GameObject createdTank = Instantiate(tanksAndScoreTables[i].Key, posForSpawn, Quaternion.Euler(0, 0, Random.Range(0, 361)));
             Tank tank = createdTank.GetComponent<Tank>();
+
+            int n = i;
+            tank.OnDestroy += delegate { tanksAndScoreTables[n].Value.Increment(); };
 
             tank.OnDestroy += RemoveDestroyedObjectAfterRaund;
             AddDestroyedObjectAfterRaund(createdTank);

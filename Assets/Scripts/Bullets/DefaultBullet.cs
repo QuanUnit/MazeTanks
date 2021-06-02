@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class DefaultBullet : Bullet
 {
-    private void Start()
-    {
-        StartCoroutine(LifeCycle(lifeTime));
-    }
+
 }
