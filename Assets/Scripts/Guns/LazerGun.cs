@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class LazerGun : Gun
 {
-    protected override void Update()
+    protected override void BulletRegistration(GameObject bullet)
     {
-        base.Update();
-    }
-    protected override void BulletRegistation(GameObject bullet)
-    {
-        base.BulletRegistation(bullet);
+        base.BulletRegistration(bullet);
         bullet.GetComponent<Bullet>().OnDestroy += actionOfChangeGun;
         ShotTrajectoryRenderer trajectoryRenderer;
         if (TryGetComponent(out trajectoryRenderer))
-            trajectoryRenderer.Disable();
+            trajectoryRenderer.enabled = false;
     }
 }

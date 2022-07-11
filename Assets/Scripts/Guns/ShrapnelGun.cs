@@ -12,12 +12,12 @@ public class ShrapnelGun : Gun
     {
         foreach (var fraction in fractions)
         {
-            base.BulletRegistation(fraction);
+            base.BulletRegistration(fraction);
         }
     }
-    protected override void BulletRegistation(GameObject bullet)
+    protected override void BulletRegistration(GameObject bullet)
     {
-        base.BulletRegistation(bullet);
+        base.BulletRegistration(bullet);
         ShrapnelBullet shrapnelBullet = bullet.GetComponent<ShrapnelBullet>();
 
         shrapnelBullet.OnExplode += FractionsRegistration;

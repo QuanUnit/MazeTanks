@@ -1070,9 +1070,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allBonusPrefabs:
-  - {fileID: 8575762884660870518, guid: c0ee4f7f663d413438a53f8e8210e076, type: 3}
-  minTimeOfSpawn: 5
-  maxTimeOfSpawn: 7
+  - {fileID: 8575762884660870518, guid: fe06d8d0b6a305b408a0bf8374317927, type: 3}
+  minTimeOfSpawn: 1
+  maxTimeOfSpawn: 1
 --- !u!1 &1668975692
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ public class ShotGun : Gun
             for(int i = 0; i < fractionCount; i++)
             {
                 GameObject spawnedBullet = SpawnBullet(transform.up);
-                BulletRegistation(spawnedBullet);
+                BulletRegistration(spawnedBullet);
             }
             countOfBullets--;
         }
@@ -32,9 +32,9 @@ public class ShotGun : Gun
         Vector3 dir = shotDiration.RejectVector(deflectionAngle);
         return base.SpawnBullet(dir);
     }
-    protected override void BulletRegistation(GameObject bullet)
+    protected override void BulletRegistration(GameObject bullet)
     {
-        base.BulletRegistation(bullet);
+        base.BulletRegistration(bullet);
         bullet.GetComponent<Bullet>().OnDestroy += actionOfChangeGun;
     }
 }

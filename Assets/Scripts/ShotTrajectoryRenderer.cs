@@ -1,46 +1,72 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(LineRenderer))]
 public class ShotTrajectoryRenderer : MonoBehaviour
 {
     [SerializeField] private float distanceFromCenter = 1f;
-    [SerializeField] private ContactFilter2D contactFilter2D;
+    [SerializeField] private float length = 5f;
+    [SerializeField] private ContactFilter2D contactFilter;
 
     private LineRenderer lineRenderer;
-    private bool canShowing = false;
-    private List<Vector3> trajectoryPoints = new List<Vector3>();
+
+    private void Awake() => lineRenderer = GetComponent<LineRenderer>();
+
+    private void OnDisable() => lineRenderer.enabled = false;
+
+    private void OnEnable() => lineRenderer.enabled = true;
+    
     private void Start()
     {
-        if (TryGetComponent<LineRenderer>(out lineRenderer))
-        {
-            Color tankColor = GetComponent<SpriteRenderer>().color;
-            canShowing = true;
-            lineRenderer.startColor = tankColor;
-            lineRenderer.endColor = new Color(tankColor.r, tankColor.g, tankColor.b, 0.6f);
-        }
-        else
-            Debug.LogError("Line renderer not found");
+        Color tankColor = GetComponent<SpriteRenderer>().color;
+        lineRenderer.startColor = tankColor;
+        lineRenderer.endColor = new Color(tankColor.r, tankColor.g, tankColor.b, 0.6f);
     }
+
     private void Update()
     {
-        if (canShowing == true)
-            ShowTrajectory(gameObject.transform.up * distanceFromCenter + gameObject.transform.position, gameObject.transform.up);
+        Transform tr = transform;
+        DrawTrajectory(gameObject.transform.up * distanceFromCenter + tr.position, tr.up);
     }
-    private void ShowTrajectory(Vector3 origin, Vector3 diration)
+    
+    private void DrawTrajectory(Vector3 origin, Vector3 direction)
     {
-        trajectoryPoints.Clear();
+        List<Vector3> trajectoryPoints = new List<Vector3>();
+        List<RaycastHit2D> contactsResult = new List<RaycastHit2D>();
         trajectoryPoints.Add(origin);
 
-        RaycastHit2D[] raycastHits = new RaycastHit2D[1];
-        Physics2D.Raycast(origin, diration, contactFilter2D, raycastHits);
-        trajectoryPoints.Add(raycastHits[0].point);
+        float lengthRemainder = length;
+        int reflectionsLimit = 20;
+        
+        while (lengthRemainder > 0 && reflectionsLimit > 0)
+        {
+            reflectionsLimit--;
+            
+            Physics2D.Raycast(origin + direction * 0.01f, direction, contactFilter, contactsResult);
+            var hit = contactsResult[0];
+            Vector2 contactPoint = hit.point;
+            Vector2 previousContactPoint = trajectoryPoints[trajectoryPoints.Count - 1];
+            float distance = Vector2.Distance(previousContactPoint, contactPoint);
 
+            if (distance > lengthRemainder) 
+            {
+                contactPoint = origin + direction * lengthRemainder;
+                trajectoryPoints.Add(contactPoint);
+                break;
+            }
+
+            lengthRemainder -= distance;
+            trajectoryPoints.Add(contactPoint);
+            origin = contactPoint;
+            direction = Vector3.Reflect(direction, hit.normal);
+
+            if (hit.rigidbody.gameObject.TryGetComponent<PlayerController>(out var player))
+            {
+                break;
+            }
+        }
+
+        lineRenderer.positionCount = trajectoryPoints.Count;
         lineRenderer.SetPositions(trajectoryPoints.ToArray());
-    }
-    public void Disable()
-    {
-        lineRenderer.enabled = false;
-        canShowing = false;
     }
 }

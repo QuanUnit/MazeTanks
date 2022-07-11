@@ -33,7 +33,7 @@ public abstract class Gun : MonoBehaviour
         if(countOfBullets > 0)
         {
             GameObject bullet = SpawnBullet(transform.up);
-            BulletRegistation(bullet);
+            BulletRegistration(bullet);
             countOfBullets--;
         }
     }
@@ -43,7 +43,7 @@ public abstract class Gun : MonoBehaviour
         spawnedBullet.GetComponent<Rigidbody2D>().AddForce(shotDiration * forceOfShot, ForceMode2D.Impulse);
         return spawnedBullet;
     }
-    protected virtual void BulletRegistation(GameObject bullet)
+    protected virtual void BulletRegistration(GameObject bullet)
     {
         GameManager.Instance.AddDestroyedObjectAfterRaund(bullet);
         firedBullets.Add(bullet);

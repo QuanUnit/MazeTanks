@@ -23,6 +23,7 @@ public class CustomInput
     private float verticalInterpolationValue = 0f;
     private float countOfSteps = 10;
     private float deferance;
+
     public CustomInput(KeyCode leftKey, KeyCode rightKey, KeyCode upKey, KeyCode downKey, KeyCode shotKey)
     {
         inputState = InputState.Active;

@@ -12,9 +12,9 @@ public class DefaultGun : Gun
     {
         countOfBullets++;
     }
-    protected override void BulletRegistation(GameObject bullet)
+    protected override void BulletRegistration(GameObject bullet)
     {
-        base.BulletRegistation(bullet);
+        base.BulletRegistration(bullet);
         bullet.GetComponent<Bullet>().OnDestroy += delegate { IncreaseCountOfBullets(); };
     }
 }
